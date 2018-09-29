@@ -43,6 +43,9 @@ fbvid.high(video).then(vid => {
 
 ## API
 
+#### __`fbvid.getDown(link)`__
+- `Returns a` object sd and hd resolution facebook video.`
+
 #### __`fbvid.low(link)`__
 
 - `Returns a` __`url`__ `for` __`low`__ `resolution facebook video.`
