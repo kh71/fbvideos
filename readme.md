@@ -21,6 +21,14 @@ const fbvid = require('fbvideos');
 
 const video = 'https://www.facebook.com/9gag/videos/10155721204506840/';
 
+fbvid.getDown(video).then(vid => {
+	console.log(vid)
+	// => {
+	//   sd: 'https://z-p3-video.fpnh5-2.fna.fbcdn.net/v/...80e9a6ca6bf93aff3f361031580cd0e7&oe=5BAE6793',
+	//   hd: 'https://z-p3-scontent.fpnh5-2.fna.fbcdn.net/v/...fe7c4ac5a6035beadf717e&oe=5C52EA14'
+	// }
+});
+
 fbvid.low(video).then(vid => {
   console.log(vid)
   // => { url: 'https://video.fpat1-1.fna.fbcdn.net/...mp4?934&oe=5972F363' }
