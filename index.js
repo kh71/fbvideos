@@ -8,13 +8,13 @@ const getDown = link => {
 	return got(link).then(res => {
 		let sd, hd = '';
 		try {
-			sd = data.split('sd_src:"')[1].split('",hd_tag')[0];
+			sd = res.split('sd_src:"')[1].split('",hd_tag')[0];
 		} catch (e) {
 			sd = false;
 		}
 
 		try {
-			hd = data.split('hd_src:"')[1].split('",sd_src:"')[0];
+			hd = res.split('hd_src:"')[1].split('",sd_src:"')[0];
 		} catch (e) {
 			hd = false;
 		}
@@ -30,7 +30,7 @@ const getDown = link => {
 				hd: hd
 			}
 		}
-		return err.message;
+		return false;
 	}).catch(err => {
 		if (err) {
 			err.message = msg;
